@@ -1,2 +1,21 @@
 ---
-# tasks file for fnn-ansible-role-java
+- name: gather os specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution|lower }}{{ ansible_distribution_major_version }}.yml"
+    - "{{ ansible_distribution|lower }}.yml"
+  tags: vars
+
+- name: ensure java_packages is defined
+  fail:
+    msg: >
+      Java packages is not defined!
+      Probably the os you are trying to install java on is not supported by this role
+      right now. Please ensure that required distribution is defined in var/ folder.
+  when: java_packages is not defined
+
+- name: install java
+  package:
+    name: "{{ java_packages }}"
+    state: present
+  tags: packages

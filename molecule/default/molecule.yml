@@ -3,16 +3,42 @@ dependency:
   name: galaxy
 driver:
   name: docker
-lint: |
-  set -e
-  yamllint .
-  ansible-lint
-  flake8
 platforms:
-  - name: instance
-    image: docker.io/pycontribs/centos:7
-    pre_build_image: true
+  - name: centos6
+    image: finnetdevlab/fnn-ansible-managed:centos6
+    pre_build_image: True
+
+  - name: centos7
+    image: finnetdevlab/fnn-ansible-managed:centos7
+    pre_build_image: True
+    privileged: True
+
+  - name: centos8
+    image: finnetdevlab/fnn-ansible-managed:centos8
+    pre_build_image: True
+    privileged: True
+
+  - name: ubuntu14.04
+    image: finnetdevlab/fnn-ansible-managed:ubuntu14.04
+    pre_build_image: True
+
+  - name: ubuntu16.04
+    image: finnetdevlab/fnn-ansible-managed:ubuntu16.04
+    pre_build_image: True
+    privileged: True
+    
+  - name: ubuntu18.04
+    image: finnetdevlab/fnn-ansible-managed:ubuntu18.04
+    pre_build_image: True
+    privileged: True
+
+  - name: ubuntu20.04
+    image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
+    pre_build_image: True
+    privileged: True
+
 provisioner:
   name: ansible
 verifier:
-  name: ansible
+  name: testinfra
+  directory: ../../tests
