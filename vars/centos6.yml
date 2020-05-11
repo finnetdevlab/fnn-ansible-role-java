@@ -1,0 +1,9 @@
+---
+available_java_packages:
+  default: java-1.8.0-openjdk
+  jre-6: java-1.6.0-openjdk
+  jdk-6: ava-1.6.0-openjdk-devel
+  jre-7: java-1.7.0-openjdk
+  jdk-7: java-1.7.0-openjdk-devel
+  jre-8: java-1.8.0-openjdk
+  jdk-8: java-1.8.0-openjdk-devel
