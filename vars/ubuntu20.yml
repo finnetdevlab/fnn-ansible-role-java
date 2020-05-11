@@ -1,0 +1,11 @@
+---
+available_java_packages:
+  default: openjdk-8-jre
+  jre-8: openjdk-8-jre
+  jdk-8: openjdk-8-jdk
+  jre-11: openjdk-11-jre
+  jdk-11: openjdk-11-jdk
+  jre-13: openjdk-13-jre
+  jdk-13: openjdk-13-jdk
+  jre-14: openjdk-14-jre
+  jdk-14: openjdk-14-jdk

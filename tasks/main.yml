@@ -6,16 +6,25 @@
     - "{{ ansible_distribution|lower }}.yml"
   tags: vars
 
-- name: ensure java_packages is defined
+- name: ensure available_java_packages is defined for os
   fail:
     msg: >
-      Java packages is not defined!
+      Available java packages is not defined!
       Probably the os you are trying to install java on is not supported by this role
-      right now. Please ensure that required distribution is defined in var/ folder.
-  when: java_packages is not defined
+      right now. Please ensure that os distribution is defined in vars/ folder.
+  when: available_java_packages is not defined
+
+- name: ensure selected java_package is available for os
+  fail:
+    msg: >
+      Java package is not available!
+      Probably the os you are trying to install java on is not support {{ java_package }}
+      package right now. Please ensure that the package you want to install is available for
+      this os distribution.
+  when: java_package not in available_java_packages
 
 - name: install java
   package:
-    name: "{{ java_packages }}"
+    name: "{{ available_java_packages[java_package] }}"
     state: present
   tags: packages
