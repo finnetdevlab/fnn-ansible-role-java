@@ -3,6 +3,11 @@ dependency:
   name: galaxy
 driver:
   name: docker
+lint: |
+  set -e
+  yamllint .
+  ansible-lint
+  flake8
 platforms:
   - name: centos6
     image: finnetdevlab/fnn-ansible-managed:centos6
@@ -36,7 +41,6 @@ platforms:
     image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
     pre_build_image: True
     privileged: True
-
 provisioner:
   name: ansible
 verifier: 
