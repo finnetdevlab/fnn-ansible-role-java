@@ -1,7 +1,0 @@
----
-available_java_packages:
-  default: java-1.8.0-openjdk
-  jre-8: java-1.8.0-openjdk
-  jdk-8: java-1.8.0-openjdk-devel
-  jre-11: java-11-openjdk
-  jdk-11: java-11-openjdk-devel

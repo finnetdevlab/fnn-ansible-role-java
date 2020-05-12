@@ -1,0 +1,10 @@
+---
+available_packages:
+  jredefault: java-1.8.0-openjdk
+  jdkdefault: java-1.8.0-openjdk-devel
+  jre7: java-1.7.0-openjdk
+  jdk7: java-1.7.0-openjdk-devel
+  jre8: java-1.8.0-openjdk
+  jdk8: java-1.8.0-openjdk-devel
+  jre11: java-11-openjdk
+  jdk11: java-11-openjdk-devel

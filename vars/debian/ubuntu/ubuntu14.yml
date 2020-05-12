@@ -1,0 +1,8 @@
+---
+available_packages:
+  jredefault: default-jre
+  jdkdefault: default-jdk
+  jre6: openjdk-6-jre
+  jdk6: openjdk-6-jdk
+  jre7: openjdk-7-jre
+  jdk7: openjdk-7-jdk
