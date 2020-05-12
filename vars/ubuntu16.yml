@@ -1,7 +1,0 @@
----
-available_java_packages:
-  default: openjdk-8-jre
-  jre-8: openjdk-8-jre
-  jdk-8: openjdk-8-jdk
-  jre-9: openjdk-9-jre
-  jdk-9: openjdk-9-jdk

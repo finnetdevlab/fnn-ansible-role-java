@@ -17,11 +17,13 @@ platforms:
     image: finnetdevlab/fnn-ansible-managed:centos7
     pre_build_image: True
     privileged: True
+    override_command: False
 
   - name: centos8
     image: finnetdevlab/fnn-ansible-managed:centos8
     pre_build_image: True
     privileged: True
+    override_command: False
 
   - name: ubuntu14.04
     image: finnetdevlab/fnn-ansible-managed:ubuntu14.04
@@ -31,16 +33,20 @@ platforms:
     image: finnetdevlab/fnn-ansible-managed:ubuntu16.04
     pre_build_image: True
     privileged: True
+    override_command: False
     
   - name: ubuntu18.04
     image: finnetdevlab/fnn-ansible-managed:ubuntu18.04
     pre_build_image: True
     privileged: True
+    override_command: False
 
   - name: ubuntu20.04
     image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
     pre_build_image: True
     privileged: True
+    override_command: False
+
 provisioner:
   name: ansible
 verifier: 

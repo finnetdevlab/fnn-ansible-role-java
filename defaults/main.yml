@@ -1,2 +1,8 @@
 ---
-java_package: default
+# Environment definition can be 'jre' or 'jdk'
+java_env: jdk
+
+# Version definition for openJDK is platform dependent. Ensure that selected os distribution
+# contains specified java version for their package manager.
+# For oracleJDK available versions are 7, 8, 9, 10, 11.
+java_ver: default

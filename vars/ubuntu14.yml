@@ -1,5 +1,0 @@
----
-available_java_packages:
-  default: default-jre
-  jre-7: openjdk-7-jre
-  jdk-7: openjdk-7-jdk
