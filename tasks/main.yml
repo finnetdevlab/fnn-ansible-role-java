@@ -43,9 +43,21 @@
   register: java_result
   changed_when: False
 
-- name: set java home environment variable to /etc/profile
+- name: link java_home if defined
+  file:
+    dest: "{{ java_home }}"
+    src: "{{ java_result.stdout }}"
+    state: link
+  when: java_home is defined
+
+- name: set java_home variable if not defined
+  set_fact:
+    java_home: "{{ java_result.stdout }}"
+  when: java_home is not defined
+
+- name: set java_home environment variable to /etc/profile
   lineinfile:
     path: /etc/profile
     regexp: '^export JAVA_HOME='
-    line: "export JAVA_HOME={{ java_result.stdout }}"
+    line: "export JAVA_HOME={{ java_home }}"
   when: not java_result.failed
