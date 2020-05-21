@@ -1,0 +1,6 @@
+---
+available_packages:
+  jredefault: openjdk-11-jre
+  jdkdefault: openjdk-11-jdk
+  jre11: openjdk-11-jre
+  jdk11: openjdk-11-jdk

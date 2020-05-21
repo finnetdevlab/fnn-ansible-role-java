@@ -11,15 +11,21 @@ _None_
 Role Variables
 --------------
 
-`java_package` variable defines generic version for OpenJDK. Default value of the variable is _default_.
- Default and available packages by platform can be found at [vars folder](./vars).
+`java_env` variable defines java environment for OpenJDK. Default value of the variable is 'jdk'.
 
 ```yml
-# Explicitly package definition format
-java_package: <jre|jdk>-<java_version>
+# Environment definition can be 'jre' or 'jdk'
+java_env: jdk
 ```
-      
 
+`java_ver` variable defines java version for OpenJDK. Default value of the variable is 'default'.
+
+```yml
+# Version definition for openJDK is platform dependent. Ensure that selected os distribution
+# contains specified java version for their package manager.
+# For oracleJDK available versions are 7, 8, 9, 10, 11.
+java_ver: default
+```
 
 Dependencies
 ------------
@@ -29,9 +35,9 @@ _None_
 Example Playbook
 ----------------
 
-Install OpenJDK JDK 11. If you specify packages explicitly, ensure that your os distributions have
+Install OpenJDK JRE 11. If you specify packages explicitly, ensure that your os distributions have
 the required package version.
 
     - hosts: servers
       roles:
-         - { role: fnn-ansible-role-java, java_package: jdk-11 }
+         - { role: fnn-ansible-role-java, java_env: jre, java_ver: 11 }

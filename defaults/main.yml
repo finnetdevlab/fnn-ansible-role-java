@@ -6,3 +6,6 @@ java_env: jdk
 # contains specified java version for their package manager.
 # For oracleJDK available versions are 7, 8, 9, 10, 11.
 java_ver: default
+
+# Set java home explicitly or the role will be set it.
+# java_home: -

@@ -1,0 +1,6 @@
+---
+available_packages:
+  jredefault: openjdk-8-jre
+  jdkdefault: openjdk-8-jdk
+  jre8: openjdk-8-jre
+  jdk8: openjdk-8-jdk
