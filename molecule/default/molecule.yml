@@ -15,15 +15,17 @@ platforms:
 
   - name: centos7
     image: finnetdevlab/fnn-ansible-managed:centos7
-    pre_build_image: True
     privileged: True
-    override_command: False
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
 
   - name: centos8
     image: finnetdevlab/fnn-ansible-managed:centos8
-    pre_build_image: True
     privileged: True
-    override_command: False
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
 
   - name: ubuntu14.04
     image: finnetdevlab/fnn-ansible-managed:ubuntu14.04
@@ -31,22 +33,101 @@ platforms:
 
   - name: ubuntu16.04
     image: finnetdevlab/fnn-ansible-managed:ubuntu16.04
-    pre_build_image: True
     privileged: True
-    override_command: False
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
     
   - name: ubuntu18.04
     image: finnetdevlab/fnn-ansible-managed:ubuntu18.04
-    pre_build_image: True
     privileged: True
-    override_command: False
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
 
   - name: ubuntu20.04
     image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
-    pre_build_image: True
     privileged: True
-    override_command: False
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
 
+  - name: debian8
+    image: finnetdevlab/fnn-ansible-managed:debian8
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: debian9
+    image: finnetdevlab/fnn-ansible-managed:debian9
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: debian10
+    image: finnetdevlab/fnn-ansible-managed:debian10
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora26
+    image: finnetdevlab/fnn-ansible-managed:fedora26
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora27
+    image: finnetdevlab/fnn-ansible-managed:fedora27
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora28
+    image: finnetdevlab/fnn-ansible-managed:fedora28
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora29
+    image: finnetdevlab/fnn-ansible-managed:fedora29
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora30
+    image: finnetdevlab/fnn-ansible-managed:fedora30
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora31
+    image: finnetdevlab/fnn-ansible-managed:fedora31
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora32
+    image: finnetdevlab/fnn-ansible-managed:fedora32
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora33
+    image: finnetdevlab/fnn-ansible-managed:fedora33
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
 provisioner:
   name: ansible
 verifier: 
