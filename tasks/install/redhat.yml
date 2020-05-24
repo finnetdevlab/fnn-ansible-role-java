@@ -1,0 +1,7 @@
+---
+- name: install java {{ java_env }} {{ java_ver }}
+  yum:
+    name: "{{ available_packages[java_env ~ java_ver] }}"
+    state: present
+    update_cache: yes
+  tags: [ packages ]

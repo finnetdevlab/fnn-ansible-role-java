@@ -25,11 +25,12 @@
         is available for this os distribution.
   when: "java_env ~ java_ver not in available_packages"
 
-- name: install java {{ java_env }} {{ java_ver }}
-  package:
-    name: "{{ available_packages[java_env ~ java_ver] }}"
-    state: present
-  tags: packages
+- name: include os specific tasks for installment
+  include_tasks: "{{ item }}"
+  with_first_found:
+    - "install/{{ ansible_os_family|lower }}/{{ ansible_distribution|lower }}.yml"
+    - "install/{{ ansible_os_family|lower }}.yml"
+  tags: [ include ]
 
 - name: find java home directory
   shell: >
