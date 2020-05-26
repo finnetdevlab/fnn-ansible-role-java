@@ -6,16 +6,20 @@
   register: java_result
   changed_when: False
 
+- name: set java_path variable
+  set_fact:
+    java_path: "{{ java_result.stdout.replace('/jre/bin/java', '') if '/jre/bin/java' in java_result.stdout else java_result.stdout.replace('/bin/java', '') }}"
+
 - name: link java_home if defined
   file:
     dest: "{{ java_home }}"
-    src: "{{ java_result.stdout }}"
+    src: "{{ java_path }}"
     state: link
   when: java_home is defined
 
 - name: set java_home variable if not defined
   set_fact:
-    java_home: "{{ java_result.stdout }}"
+    java_home: "{{ java_path }}"
   when: java_home is not defined
 
 - name: set java_home environment variable to /etc/profile
