@@ -1,7 +1,7 @@
 ---
-- name: Converge
+- name: converge
   hosts: all
   tasks:
-    - name: "Include fnn-ansible-role-java"
+    - name: include role for default values
       include_role:
-        name: "fnn-ansible-role-java"
+        name: fnn-ansible-role-java

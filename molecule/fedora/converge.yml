@@ -1,0 +1,40 @@
+---
+- name: converge fedora for jre8
+  hosts: jre8
+  vars:
+    java_env: jre
+    java_ver: 8
+  tasks:
+    - name: include role for jre8
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge fedora for jdk8
+  hosts: jdk8
+  vars:
+    java_env: jdk
+    java_ver: 8
+  tasks:
+    - name: include role for jdk8
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge fedora for jre11
+  hosts: jre11
+  vars:
+    java_env: jre
+    java_ver: 11
+  tasks:
+    - name: include role for jre11
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge fedora for jdk11
+  hosts: jdk11
+  vars:
+    java_env: jdk
+    java_ver: 11
+  tasks:
+    - name: include role for jdk11
+      include_role:
+        name: fnn-ansible-role-java

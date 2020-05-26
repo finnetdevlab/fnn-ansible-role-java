@@ -1,0 +1,142 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: ubuntu14.04-jre-6
+    groups: [ jre6 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu14.04
+    pre_build_image: True
+
+  - name: ubuntu14.04-jdk-6
+    groups: [ jdk6 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu14.04
+    pre_build_image: True
+
+  - name: ubuntu14.04-jre-7
+    groups: [ jre7 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu14.04
+    pre_build_image: True
+
+  - name: ubuntu14.04-jdk-7
+    groups: [ jdk7 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu14.04
+    pre_build_image: True
+
+  - name: ubuntu16.04-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu16.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: ubuntu16.04-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu16.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+    
+  - name: ubuntu18.04-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu18.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+    
+  - name: ubuntu18.04-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu18.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+    
+  - name: ubuntu18.04-jre-11
+    groups: [ jre11 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu18.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+    
+  - name: ubuntu18.04-jdk-11
+    groups: [ jdk11 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu18.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: ubuntu20.04-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: ubuntu20.04-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: ubuntu20.04-jre-11
+    groups: [ jre11 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: ubuntu20.04-jdk-11
+    groups: [ jdk11 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: ubuntu20.04-jre-13
+    groups: [ jre13 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: ubuntu20.04-jdk-13
+    groups: [ jdk13 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: ubuntu20.04-jre-14
+    groups: [ jre14 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: ubuntu20.04-jdk-14
+    groups: [ jdk14 ]
+    image: finnetdevlab/fnn-ansible-managed:ubuntu20.04
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+provisioner:
+  name: ansible
+verifier: 
+  name: testinfra
+  directory: ../../tests

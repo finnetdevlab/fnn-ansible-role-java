@@ -4,5 +4,3 @@ available_packages:
   jdkdefault: openjdk-8-jdk
   jre8: openjdk-8-jre
   jdk8: openjdk-8-jdk
-  jre9: openjdk-9-jre
-  jdk9: openjdk-9-jdk

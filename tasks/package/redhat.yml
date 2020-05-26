@@ -1,0 +1,8 @@
+---
+# Install 'which' package to determine location of the installed java binaries
+- name: install java {{ java_env }} {{ java_ver }}
+  yum:
+    name: "['which', '{{ available_packages[java_env ~ java_ver] }}']"
+    state: present
+    update_cache: yes
+  tags: [ packages ]

@@ -1,0 +1,202 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: fedora26-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora26
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora26-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora26
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora27-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora27
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora27-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora27
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora28-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora28
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora28-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora28
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora29-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora29
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora29-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora29
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora30-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora30
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora30-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora30
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora30-jre-11
+    groups: [ jre11 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora30
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora30-jdk-11
+    groups: [ jdk11 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora30
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora31-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora31
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora31-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora31
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora31-jre-11
+    groups: [ jre11 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora31
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora31-jdk-11
+    groups: [ jdk11 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora31
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora32-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora32
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora32-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora32
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora32-jre-11
+    groups: [ jre11 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora32
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora32-jdk-11
+    groups: [ jdk11 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora32
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora33-jre-8
+    groups: [ jre8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora33
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora33-jdk-8
+    groups: [ jdk8 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora33
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora33-jre-11
+    groups: [ jre11 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora33
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+
+  - name: fedora33-jdk-11
+    groups: [ jdk11 ]
+    image: finnetdevlab/fnn-ansible-managed:fedora33
+    privileged: True
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    pre_build_image: True
+provisioner:
+  name: ansible
+verifier: 
+  name: testinfra
+  directory: ../../tests

@@ -28,37 +28,10 @@
 - name: include os specific tasks for installment
   include_tasks: "{{ item }}"
   with_first_found:
-    - "install/{{ ansible_os_family|lower }}/{{ ansible_distribution|lower }}.yml"
-    - "install/{{ ansible_os_family|lower }}.yml"
+    - "package/{{ ansible_os_family|lower }}/{{ ansible_distribution|lower }}.yml"
+    - "package/{{ ansible_os_family|lower }}.yml"
+  register: package_result
   tags: [ include ]
 
-- name: find java home directory
-  shell: >
-    set -o pipefail && \
-    java -XshowSettings:properties -version 2>&1 > /dev/null | \
-    grep 'java.home' | \
-    cut -d'=' -f2 | \
-    sed -e 's/^[[:space:]]*//'
-  args:
-    executable: /bin/bash
-  register: java_result
-  changed_when: False
-
-- name: link java_home if defined
-  file:
-    dest: "{{ java_home }}"
-    src: "{{ java_result.stdout }}"
-    state: link
-  when: java_home is defined
-
-- name: set java_home variable if not defined
-  set_fact:
-    java_home: "{{ java_result.stdout }}"
-  when: java_home is not defined
-
-- name: set java_home environment variable to /etc/profile
-  lineinfile:
-    path: /etc/profile
-    regexp: '^export JAVA_HOME='
-    line: "export JAVA_HOME={{ java_home }}"
-  when: not java_result.failed
+- name: configure java environment
+  include: configure.yml

@@ -1,0 +1,120 @@
+---
+- name: converge ubuntu for jre6
+  hosts: jre6
+  vars:
+    java_env: jre
+    java_ver: 6
+  tasks:
+    - name: include role for jre6
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jdk6
+  hosts: jdk6
+  vars:
+    java_env: jdk
+    java_ver: 6
+  tasks:
+    - name: include role for jdk6
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jre7
+  hosts: jre7
+  vars:
+    java_env: jre
+    java_ver: 7
+  tasks:
+    - name: include role for jre7
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jdk7
+  hosts: jdk7
+  vars:
+    java_env: jdk
+    java_ver: 7
+  tasks:
+    - name: include role for jdk7
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jre8
+  hosts: jre8
+  vars:
+    java_env: jre
+    java_ver: 8
+  tasks:
+    - name: include role for jre8
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jdk8
+  hosts: jdk8
+  vars:
+    java_env: jdk
+    java_ver: 8
+  tasks:
+    - name: include role for jdk8
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jre11
+  hosts: jre11
+  vars:
+    java_env: jre
+    java_ver: 11
+  tasks:
+    - name: include role for jre11
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jdk11
+  hosts: jdk11
+  vars:
+    java_env: jdk
+    java_ver: 11
+  tasks:
+    - name: include role for jdk11
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jre13
+  hosts: jre13
+  vars:
+    java_env: jre
+    java_ver: 13
+  tasks:
+    - name: include role for jre13
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jdk13
+  hosts: jdk13
+  vars:
+    java_env: jdk
+    java_ver: 13
+  tasks:
+    - name: include role for jdk13
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jre14
+  hosts: jre14
+  vars:
+    java_env: jre
+    java_ver: 14
+  tasks:
+    - name: include role for jre14
+      include_role:
+        name: fnn-ansible-role-java
+
+- name: converge ubuntu for jdk14
+  hosts: jdk14
+  vars:
+    java_env: jdk
+    java_ver: 14
+  tasks:
+    - name: include role for jdk14
+      include_role:
+        name: fnn-ansible-role-java
